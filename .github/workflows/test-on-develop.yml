@@ -1,0 +1,31 @@
+name: Cypress Component Tests
+
+on:
+  pull_request:
+    branches: [develop]
+
+jobs:
+  cypress-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install root dependencies
+        run: npm install
+
+      - name: Install client dependencies
+        working-directory: client
+        run: npm install
+
+      - name: Run Cypress component tests
+        run: |
+          cd client
+          npx cypress run --component
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-results
+          path: cypress/results
