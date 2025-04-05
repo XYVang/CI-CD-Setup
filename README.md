@@ -25,7 +25,7 @@ Cypress Render Deploy
 ![Cypress Render Deploy](Assets/Cypressdeploy.png)
 
 Render Settings
-![Render Settings](Assets\RenderSettings.png)
+![Render Settings](Assets/RenderSettings.png)
 
 Front/Back-end deployed on Render
 ![Front and Back end deployed on Render](Assets/DeployedonRender.png)
